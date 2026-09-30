@@ -1,8 +1,7 @@
 using System;
 using System.Threading;
 using Cysharp.Threading.Tasks;
-
-public class PlayerIdleState : PlayerBaseState
+public class PlayerMoveState : PlayerBaseState
 {
     public override void Enter(PlayerController owner)
     {
@@ -26,12 +25,12 @@ public class PlayerIdleState : PlayerBaseState
         {
             while (true)
             {
-                if (owner.MoveInput.x != 0f)
+                if (owner.MoveInput.x == 0f)
                 {
-                    owner.ChangeState<PlayerMoveState>();
-                }
+                    owner.ChangeState<PlayerIdleState>();
 
-                await UniTask.NextFrame(PlayerLoopTiming.EarlyUpdate, ctk);
+                    await UniTask.NextFrame(PlayerLoopTiming.EarlyUpdate, ctk);
+                }
             }
         }
         catch (OperationCanceledException)
