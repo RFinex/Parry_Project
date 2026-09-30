@@ -836,20 +836,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   data: {fileID: 11400000, guid: be9a085361e30404d9b6c9ac0f13ade5, type: 2}
   stats: {fileID: 1302843622}
-  moveSpeed: 0
   frontDir: 1
-  jumpForce: 0
-  checkSize: {x: 0, y: 0}
-  checkDistance: 0
-  groundLayer:
-    serializedVersion: 2
-    m_Bits: 0
-  checkOffset: {x: 0, y: 0, z: 0}
-  dashTime: 0
-  dashSpeed: 0
-  dashCool: 0
   dashCheckTimer: 0
   dashCoolTimer: 0
+  currentStateName: 
   isGround: 0
   isDash: 0
 --- !u!114 &1302843622
