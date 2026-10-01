@@ -1,14 +1,14 @@
 using UnityEngine;
 
-public class PlayerDashState : PlayerBaseState
+public class PlayerJumpState : PlayerBaseState
 {
     public override void Enter(PlayerController owner)
     {
-        Utils.Log<PlayerJumpState>("Dash State 시작");
+        Utils.Log<PlayerJumpState>("Jump State 시작");
     }
 
     public override void Exit(PlayerController owner)
     {
-        Utils.Log<PlayerJumpState>("Dash State 종료");
+        Utils.Log<PlayerJumpState>("Jump State 종료");
     }
 }
